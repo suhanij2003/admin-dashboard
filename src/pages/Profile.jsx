@@ -29,7 +29,7 @@ import {
 export default function Profile() {
   const { user, updateUser, hasPermission } = useAuth();
   const { showSnackbar } = useSnackbar();
-  const [isEditing, setIsEditing] = useState(false);
+  const [isEditing, setIsEditing] = useState(true);
   
   const [formData, setFormData] = useState({
     name: user?.name || '',
@@ -49,7 +49,7 @@ export default function Profile() {
   const handleSave = () => {
     updateUser({ ...user, ...formData });
     setIsEditing(false);
-    showSnackbar('Profile updated successfully! 🎉');
+    showSnackbar('Profile updated successfully! ');
   };
 
   const permissions = [

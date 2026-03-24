@@ -1,5 +1,6 @@
 import { useAuth } from '../context/AuthContext';
 
+
 export default function Table({ data, onRowClick, onDelete, onEdit }) {
   const { hasPermission } = useAuth();
   const canEdit = hasPermission('canEdit');
